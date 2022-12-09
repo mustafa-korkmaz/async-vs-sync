@@ -8,11 +8,12 @@ export const options = {
             timeUnit: '1m', // 1 iterations per minute, i.e. 2000 requests in total
             duration: '1m',
             preAllocatedVUs: 500, // how large the initial pool of VUs would be
-            maxVUs: 500, // if the preAllocatedVUs are not enough, we can initialize more
+            maxVUs: 750, // if the preAllocatedVUs are not enough, we can initialize more
         },
     },
 };
 
 export default function () {
-    http.get('http://localhost:5555/syncfoo');
+    http.get('http://localhost:5000/asyncfoo');
+     //http.get('http://localhost:5000/syncfoo');
 }
